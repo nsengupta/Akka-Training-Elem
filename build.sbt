@@ -1,11 +1,12 @@
-name := """akka-sample-main-java"""
+name := """akka-lab-exercises-java"""
 
-version := "2.4.11"
-
-scalaVersion := "2.11.7"
+scalaVersion := "2.11.8"
 
 libraryDependencies ++= Seq(
-  "com.typesafe.akka" %% "akka-actor" % "2.4.11"
+  "com.typesafe.akka" %% "akka-actor" % "2.4.11",
+  "junit" % "junit" % "4.12",
+  "com.novocode" % "junit-interface" % "0.11",
+  "com.typesafe.akka" % "akka-testkit_2.11" % "2.4.16"
 )
 
 licenses := Seq(("CC0", url("http://creativecommons.org/publicdomain/zero/1.0")))

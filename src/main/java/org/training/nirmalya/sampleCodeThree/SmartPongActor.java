@@ -6,8 +6,8 @@ import akka.actor.UntypedActor;
 
 public class SmartPongActor extends UntypedActor {
 	
+	// TODO: Before modifying code, please refer to the instructions.
 	
-
 	@Override
 	public void onReceive(Object arg0) throws Throwable {
 		

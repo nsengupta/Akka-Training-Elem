@@ -1,4 +1,4 @@
-package org.training.nirmalya.sampleCodeFive;
+package org.training.nirmalya.sampleCodeEight;
 
 
 import akka.actor.ActorRef;
@@ -10,29 +10,28 @@ public class PongBossActor extends UntypedActor {
 	
 	// TODO [NS]: To be given as exercise
 	
-	private ActorRef pingFlunkey1 = null;
-	private ActorRef pingFlunkey2 = null;
+	private ActorRef sambhaActor = null; // getContext().actorOf(PingActor.Props("Sambha"),"Sambha");
+	private ActorRef kaliaActor =  null; // getContext().actorOf(PongActor.Props("Kalia"),"Kalia");;
 
 	@Override
 	public void onReceive(Object arg0) throws Throwable {
 		
-		// TODO: Make Sambha and Kalia identify themselves, when they respond to Pong messages
+		// TODO: Boss doesn't do anything by himself. She asks Kalia and Sambha to do the needful.
 
 	}
 	
-	public static Props props(final ActorRef actor1, final ActorRef actor2) {
+	public static Props props() {
 	    return Props.create(new Creator<PongBossActor>() {
 	      private static final long serialVersionUID = 1L;
 	 
 	      public PongBossActor create() throws Exception {
-	        return new PongBossActor(actor1,actor2);
+	        return new PongBossActor();
 	      }
 	    });
 	} 
 
-	public PongBossActor(final ActorRef actor1, final ActorRef actor2) {
-		this.pingFlunkey1 = actor1;
-		this.pingFlunkey2 = actor2;
+	public PongBossActor() {
+	
 	}
 
 }
