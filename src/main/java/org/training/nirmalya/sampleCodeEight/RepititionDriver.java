@@ -19,13 +19,13 @@ import akka.actor.Inbox;
 import akka.actor.Props;
 
 
-public class Driver {
+public class RepititionDriver {
 
 	public static void main(String[] args) {
 		
 		ActorSystem system = ActorSystem.create("Ping-Pong");
 	
-		ActorRef bossActor = system.actorOf(Props.create(SelfRemindingPongBossActor.class));
+		ActorRef bossActor = system.actorOf(Props.create(RepetitiveSelfRemindingPongBossActor.class));
 		
 		try {
             Thread.sleep(5000);

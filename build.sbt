@@ -1,4 +1,4 @@
-name := """akka-lab-exercises-java"""
+name := """Akka-Lab-Exercises-1"""
 
 scalaVersion := "2.11.8"
 
