@@ -11,7 +11,7 @@ import scala.concurrent.duration.Duration;
 
 import java.util.concurrent.TimeUnit;
 
-public class RepetitiveSelfRemindingPongBossActor extends UntypedActor {
+public class RepetitiveSelfRemindingBossActor extends UntypedActor {
 	
 	private Cancellable cancellable = getContext().system().scheduler().schedule(
 			Duration.create(2, TimeUnit.SECONDS), 
@@ -30,22 +30,19 @@ public class RepetitiveSelfRemindingPongBossActor extends UntypedActor {
 		   System.out.println("Time To Start a Ping|Pong game!");
 			
 		}
-		
-		
-
 	}
 	
 	public static Props props() {
-	    return Props.create(new Creator<RepetitiveSelfRemindingPongBossActor>() {
+	    return Props.create(new Creator<RepetitiveSelfRemindingBossActor>() {
 	      private static final long serialVersionUID = 1L;
 	 
-	      public RepetitiveSelfRemindingPongBossActor create() throws Exception {
-	        return new RepetitiveSelfRemindingPongBossActor();
+	      public RepetitiveSelfRemindingBossActor create() throws Exception {
+	        return new RepetitiveSelfRemindingBossActor();
 	      }
 	    });
 	} 
 
-	public RepetitiveSelfRemindingPongBossActor() {
+	public RepetitiveSelfRemindingBossActor() {
 	
 	}
 

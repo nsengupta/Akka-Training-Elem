@@ -1,7 +1,5 @@
 package org.training.nirmalya.sampleCodeThree;
 
-
-
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 

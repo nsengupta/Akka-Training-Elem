@@ -20,10 +20,18 @@ public class Driver {
 		
 		final Inbox inbox = Inbox.create(system);
 		
-		ActorRef firstPongActor  = system.actorOf(PongActor.props("Hello"), "Kalia-Pong");
-		ActorRef secondPongActor = system.actorOf(PongActor.props("Hello"), "Sambha-Pong");
+		ActorRef firstPongActor  = system.actorOf(
+				PongActor.props("Hello"), 
+				"Kalia-Pong");
+		ActorRef secondPongActor = system.actorOf(
+				PongActor.props("Hello"), 
+				"Sambha-Pong");
 				
-        ActorRef bossActor = system.actorOf(PongBossActor.props(firstPongActor,secondPongActor),"Pong-Gabbar");
+        ActorRef bossActor = system.actorOf(
+        		PongBossActor.props(
+        				firstPongActor,
+        				secondPongActor),
+        				"Pong-Gabbar");
         
         // inbox.send(pongActor, new PingPongMessageProtocol.PingMessage());
         

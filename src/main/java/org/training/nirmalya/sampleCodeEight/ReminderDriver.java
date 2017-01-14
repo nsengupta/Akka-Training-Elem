@@ -19,7 +19,7 @@ import akka.actor.Inbox;
 import akka.actor.Props;
 
 
-public class RepititionDriver {
+public class ReminderDriver {
 
 	public static void main(String[] args) {
 		
