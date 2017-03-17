@@ -13,7 +13,10 @@ public class PingPongMessageProtocol {
 		}
 	}
 	
-	public static class PongMessage { 
+	public static class PongMessage implements Serializable { 
+		
+		private static final long serialVersionUID = 1L;
+
 		public String toString() {
 			return ("PongMessage");
 		}

@@ -9,6 +9,7 @@ import akka.actor.UntypedActor;
 import akka.japi.Creator;
 
 public class PongActor extends UntypedActor {
+	
 	@Override
 	public void onReceive(Object arg0) throws Throwable {
 		
@@ -21,16 +22,6 @@ public class PongActor extends UntypedActor {
 		}
 	}
 
-	public static Props props(final String sayWhat) {
-	    return Props.create(new Creator<PongActor>() {
-	      private static final long serialVersionUID = 1L;
-	 
-	      public PongActor create() throws Exception {
-	        return new PongActor(sayWhat);
-	      }
-	    });
-	} 
-	
 	String sayWhat = "DontKnow";
 	
 	public PongActor(final String sayWhat) {

@@ -1,6 +1,6 @@
 package org.training.nirmalya.sampleCodeThree;
 
-import org.training.nirmalya.sampleCodeThree.PingPongMessageProtocol.PingMessage;
+import org.training.nirmalya.sampleCodeThree.PingPongMessageProtocol.*;
 
 import akka.actor.UntypedActor;
 
@@ -12,7 +12,7 @@ public class SmartPongActor extends UntypedActor {
 	public void onReceive(Object arg0) throws Throwable {
 		
 		if (arg0 instanceof PingMessage) {
-			getSender().tell("Pong", getSelf());
+			getSender().tell(new PingPongMessageProtocol.PongMessage(), getSelf());
 		}
 		else {
 			System.out.println("Unknown Message [" + arg0 + "]");

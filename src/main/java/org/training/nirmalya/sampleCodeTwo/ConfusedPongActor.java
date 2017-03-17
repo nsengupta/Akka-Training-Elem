@@ -4,8 +4,6 @@ import akka.actor.UntypedActor;
 
 public class ConfusedPongActor extends UntypedActor {
 	
-	
-
 	@Override
 	public void onReceive(Object arg0) throws Throwable {
 		

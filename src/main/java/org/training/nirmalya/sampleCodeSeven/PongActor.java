@@ -2,8 +2,6 @@ package org.training.nirmalya.sampleCodeSeven;
 
 
 
-import org.training.nirmalya.sampleCodeFour.PingPongMessageProtocol.PingMessage;
-
 import akka.actor.Props;
 import akka.actor.UntypedActor;
 import akka.japi.Creator;

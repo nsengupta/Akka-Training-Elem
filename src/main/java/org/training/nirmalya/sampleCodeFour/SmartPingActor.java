@@ -5,7 +5,7 @@ import akka.actor.UntypedActor;
 public class SmartPingActor extends UntypedActor {
 	
 	
-	//TODO: Props are missing; implement.
+	//TODO: Props is missing; implement.
 	
 	@Override
 	public void onReceive(Object arg0) throws Throwable {

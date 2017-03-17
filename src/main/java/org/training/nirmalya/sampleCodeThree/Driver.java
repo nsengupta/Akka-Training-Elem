@@ -24,7 +24,7 @@ public class Driver {
         inbox.send(pongActor, new PingPongMessageProtocol.PingMessage());
         
         try {
-			System.out.println((String)inbox.receive(Duration.create(2, TimeUnit.SECONDS)));
+			System.out.println((PingPongMessageProtocol.PongMessage)inbox.receive(Duration.create(2, TimeUnit.SECONDS)));
 		} catch (TimeoutException e1) {
 			
 			e1.printStackTrace();

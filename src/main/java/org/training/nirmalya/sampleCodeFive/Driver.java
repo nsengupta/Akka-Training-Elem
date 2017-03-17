@@ -18,29 +18,26 @@ public class Driver {
 		
 		ActorSystem system = ActorSystem.create("Ping-Pong");
 		
-		final Inbox inbox = Inbox.create(system);
+		/*final Inbox inbox = Inbox.create(system);
 		
 		ActorRef firstPongActor  = system.actorOf(
 				PongActor.props("Hello"), 
-				"Kalia-Pong");
+				"Kalia");
 		ActorRef secondPongActor = system.actorOf(
 				PongActor.props("Hello"), 
-				"Sambha-Pong");
+				"Sambha");
 				
         ActorRef bossActor = system.actorOf(
         		PongBossActor.props(
         				firstPongActor,
         				secondPongActor),
-        				"Pong-Gabbar");
+        				"Gabbar");*/
         
+        // Just a template, to help you remember how to use an Inbox!
+        //
         // inbox.send(pongActor, new PingPongMessageProtocol.PingMessage());
-        
-        try {
-			System.out.println((String)inbox.receive(Duration.create(2, TimeUnit.SECONDS)));
-		} catch (TimeoutException e1) {
-			
-			e1.printStackTrace();
-		}
+        //
+        // Now, prepare to receive through the inbox.
         
         System.out.println("terminating actor system!");
         system.terminate();

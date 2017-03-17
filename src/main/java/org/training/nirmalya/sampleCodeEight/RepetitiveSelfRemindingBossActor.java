@@ -13,7 +13,8 @@ import java.util.concurrent.TimeUnit;
 
 public class RepetitiveSelfRemindingBossActor extends UntypedActor {
 	
-	private Cancellable cancellable = getContext().system().scheduler().schedule(
+	private Cancellable cancellable = 
+			getContext().system().scheduler().schedule(
 			Duration.create(2, TimeUnit.SECONDS), 
 			Duration.create(1, TimeUnit.SECONDS), 
 					getSelf(), 

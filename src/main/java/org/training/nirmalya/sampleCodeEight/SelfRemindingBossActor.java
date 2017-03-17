@@ -13,7 +13,8 @@ import java.util.concurrent.TimeUnit;
 
 public class SelfRemindingBossActor extends UntypedActor {
 	
-	private Cancellable cancellable = getContext().system().scheduler().scheduleOnce(
+	private Cancellable cancellable = 
+			getContext().system().scheduler().scheduleOnce(
 			Duration.create(2, TimeUnit.SECONDS),
             getSelf(),
             new PingPongMessageProtocol.TimeToPingPong(), 

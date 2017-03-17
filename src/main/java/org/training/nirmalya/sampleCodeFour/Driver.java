@@ -12,7 +12,7 @@ public class Driver {
 	public static void main(String[] args) {		
 		ActorSystem system = ActorSystem.create("Ping-Pong");
 		final Inbox inbox = Inbox.create(system);
-        ActorRef pongActor = system.actorOf(PongActor.props("Oolala"));
+        ActorRef pongActor = null; // system.actorOf(SmartPongActor.props("Oolala"));
         inbox.send(pongActor, new PingPongMessageProtocol.PingMessage());
         try {
 			System.out.println((String)inbox.receive(Duration.create(2, TimeUnit.SECONDS)));

@@ -1,7 +1,4 @@
 package org.training.nirmalya.sampleCodeSeven;
-
-
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -19,22 +16,18 @@ import akka.actor.Inbox;
 public class Driver {
 
 	public static void main(String[] args) {
-		
-		
 		Config config = ConfigFactory.load();
 		String bossName = 
 				config.getConfig("attendeesParams").getString("bossName");  // This works.
 		 
-		ActorSystem system = ActorSystem.create("Ping-Pong",config);
+		ActorSystem actorSystem = ActorSystem.create("Ping-Pong",config);
 		
 		String bossNameFromAfterActorSystemIsCreated = 
-				system.settings().config().getString("attendeesParams.bossName"); // This works too!
+				actorSystem.settings().config().getString("attendeesParams.bossName"); // This works too!
 		
 		// TODO: Print both the names of the boss, obtained and check if they are the same.
 		
-		
-		
-		final Inbox inbox = Inbox.create(system);
+		final Inbox inbox = Inbox.create(actorSystem);
 		
 		// TODO: Remove error from the BossActor's creation attempt, below.
         //ActorRef bossActor = system.actorOf(PongBossActor.props(firstPongActor,secondPongActor),"Pong-Gabbar");
@@ -49,7 +42,7 @@ public class Driver {
 		}
         
         System.out.println("terminating actor system!");
-        system.terminate();
+        actorSystem.terminate();
 
 	}
 

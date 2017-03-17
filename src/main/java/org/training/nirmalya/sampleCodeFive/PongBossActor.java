@@ -16,7 +16,8 @@ public class PongBossActor extends UntypedActor {
 	@Override
 	public void onReceive(Object arg0) throws Throwable {
 		
-		// TODO: Make Sambha and Kalia identify themselves, when they respond to Pong messages
+		// TODO: Make Sambha and Kalia identify themselves, 
+		// when they respond to Pong messages
 
 	}
 	

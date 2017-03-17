@@ -12,6 +12,7 @@ public class PingPongMessageProtocol {
 	}
 	
 	public static class PongMessage { 
+		private static final long serialVersionUID = 1L;
 		public String toString() {
 			return ("PongMessage");
 		}
