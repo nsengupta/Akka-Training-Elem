@@ -1,4 +1,4 @@
-name := """Akka-Lab-Exercises-1"""
+name := """Akka-Lab-Exercises"""
 
 scalaVersion := "2.11.8"
 
@@ -12,4 +12,3 @@ libraryDependencies ++= Seq(
   
 )
 
-licenses := Seq(("CC0", url("http://creativecommons.org/publicdomain/zero/1.0")))
