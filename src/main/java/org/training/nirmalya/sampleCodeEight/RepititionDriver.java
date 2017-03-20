@@ -7,11 +7,6 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
-import org.training.nirmalya.sampleCodeThree.SmartPongActor;
-
-import com.typesafe.config.Config;
-import com.typesafe.config.ConfigFactory;
-
 import scala.concurrent.duration.Duration;
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
@@ -25,10 +20,10 @@ public class RepititionDriver {
 		
 		ActorSystem system = ActorSystem.create("Ping-Pong");
 	
-		ActorRef bossActor = system.actorOf(Props.create(SelfRemindingBossActor.class));
+		ActorRef bossActor = system.actorOf(Props.create(RepetitiveSelfRemindingBossActor.class));
 		
 		try {
-            Thread.sleep(5000);
+            Thread.sleep(7000);
         } catch (InterruptedException e) {/*  ignore  */}
         System.out.println("terminating actor system!");
         system.terminate();

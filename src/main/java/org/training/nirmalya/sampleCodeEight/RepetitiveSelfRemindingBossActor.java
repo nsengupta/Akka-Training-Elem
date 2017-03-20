@@ -21,7 +21,6 @@ public class RepetitiveSelfRemindingBossActor extends UntypedActor {
 					new PingPongMessageProtocol.TimeToPingPong(), 
 					getContext().system().dispatcher(), 
 					null);
-			
 
 	@Override
 	public void onReceive(Object arg0) throws Throwable {
@@ -29,7 +28,7 @@ public class RepetitiveSelfRemindingBossActor extends UntypedActor {
 		if (arg0 instanceof PingPongMessageProtocol.TimeToPingPong) {
 			
 		   System.out.println("Time To Start a Ping|Pong game!");
-			
+		   
 		}
 	}
 	
