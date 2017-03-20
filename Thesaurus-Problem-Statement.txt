@@ -1,0 +1,8 @@
+A multi-lingual thesaurus actor provides synonyms of English words, in English and Hindi
+It employs two linguist actors to help it
+One understands English and the other, Hindi
+There may be zero, one or more synonyms available for each English word supplied
+An user specifies which language is she interested in (may be both), and supplies an English word
+The linguist actors learn too 
+collects synonyms they haven’t known so far
+
