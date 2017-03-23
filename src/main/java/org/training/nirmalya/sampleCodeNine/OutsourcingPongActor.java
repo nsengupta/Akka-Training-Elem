@@ -7,6 +7,8 @@ import akka.actor.ActorRef;
 import akka.actor.Props;
 import akka.actor.UntypedActor;
 import akka.dispatch.*;
+import akka.event.Logging;
+import akka.event.LoggingAdapter;
 import akka.japi.Creator;
 import scala.concurrent.duration.FiniteDuration;
 import akka.japi.Function;
@@ -31,7 +33,7 @@ import static java.util.concurrent.TimeUnit.SECONDS;
 
 public class OutsourcingPongActor extends UntypedActor {
 	
-	
+	LoggingAdapter log = Logging.getLogger(getContext().system(), this);
 	
 	@Override
 	public void onReceive(Object arg0) throws Throwable {

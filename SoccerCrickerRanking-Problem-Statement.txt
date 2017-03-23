@@ -1,0 +1,7 @@
+-  A PlayerRankingInfoActor offers ranking of players
+-  It uses the services of a CricketRankingActor and a SoccerRankingActor
+-  Controllers use CompletionStage to return from actions
+-  People may want to vote to increase or decrease the rank of a player (rank > 0, always)
+-  Watchers query the rank of a Cricket or Soccer player (or of both)
+-  Admin may stop the voting for a given player, anytime.
+
