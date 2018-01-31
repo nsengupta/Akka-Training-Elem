@@ -21,4 +21,9 @@ addSbtPlugin("com.typesafe.sbt" % "sbt-play-enhancer" % "1.1.0")
 // enablePlugins(PlayEbean).
 // addSbtPlugin("com.typesafe.sbt" % "sbt-play-ebean" % "3.0.2")
 
+addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "5.0.1")
+
+addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.8.2")
+
+
 resolvers += "Sonatype OSS Snapshots" at "http://oss.sonatype.org/content/repositories/snapshots/"
