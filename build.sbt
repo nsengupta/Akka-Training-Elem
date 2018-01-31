@@ -16,3 +16,8 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka" % "akka-remote_2.11" % "2.5.8"
 )
 
+testOptions += Tests.Argument(TestFrameworks.JUnit, "-v")
+
+// fork in run := true
+
+
