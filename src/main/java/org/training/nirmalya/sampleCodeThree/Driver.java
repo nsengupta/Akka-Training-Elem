@@ -20,6 +20,7 @@ public class Driver {
 		final Inbox inbox = Inbox.create(system);
 				
         ActorRef pongActor = system.actorOf(Props.create(SmartPongActor.class));
+        // ActorRef pongActor = system.actorOf(Props.create(SmartPongActorUsingLambda.class));
         
         inbox.send(pongActor, new PingPongMessageProtocol.PingMessage());
         
